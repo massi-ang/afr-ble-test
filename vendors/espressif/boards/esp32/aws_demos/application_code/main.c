@@ -90,6 +90,9 @@
 #define mainLOGGING_TASK_STACK_SIZE (configMINIMAL_STACK_SIZE * 4)
 #define mainDEVICE_NICK_NAME "Espressif_Demo"
 
+/* Led GPIO pin */
+#define LED_PIN ( 32 )
+
 QueueHandle_t spp_uart_queue = NULL;
 
 /* Variable used to indicate the connected network. */
@@ -383,11 +386,13 @@ void vApplicationIPNetworkEventHook(eIPCallbackEvent_t eNetworkEvent)
 }
 #endif
 
+/* Blink a led with a second period and 50% duty cycle */
+
 void vLedBlinkCallback(TimerHandle_t xTimer)
 {
-    GPIO_OUTPUT_SET(32, 1);
+    GPIO_OUTPUT_SET(LED_PIN, 1);
     vTaskDelay(pdMS_TO_TICKS(500UL));
-    GPIO_OUTPUT_SET(32, 0);
+    GPIO_OUTPUT_SET(LED_PIN, 0);
 }
 
 void vNetworkChangedCB(uint32_t ulNetworkType,
