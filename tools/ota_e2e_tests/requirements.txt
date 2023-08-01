@@ -36,7 +36,7 @@ cffi==1.12.3 \
     --hash=sha256:e070535507bd6aa07124258171be2ee8dfc19119c28ca94c9dfb7efd23564512 \
     --hash=sha256:e1ff2748c84d97b065cc95429814cdba39bcbd77c9c85c89344b317dc0d9cbff \
     --hash=sha256:ed851c75d1e0e043cbf5ca9a8e1b13c4c90f3fbd863dacb01c0808e2b5204201
-cryptography==41.0.2
+cryptography==41.0.3
 docutils==0.15.2 \
     --hash=sha256:6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0 \
     --hash=sha256:9e4d7ecfc600058e07ba661411a2b7de2fd0fafa17d1a7f7361cd47b1175c827 \
